@@ -2,7 +2,7 @@ let button = document.getElementById('button');
 let mappy = document.getElementById('map');
 let options = {
     center:{ lat:9.0778, lng:8.6775},
-    zoom: 13
+    zoom: 7
 };
 
 let map;
