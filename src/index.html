@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Geo Search</title>
+    
+    <link href="css/custom.css" rel="stylesheet" >
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Google Map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+
+</head>
+<body>
+    <div id="load">
+        <img src="image/Spinner-1s-200px.gif" class="img-edit">
+    </div>
+    <div class="container" id="container">
+        <nav class="navigation">
+            <div class="navigation-1">
+                <div class="navigation-brand">
+                    <a href="#" class="navigation-brand-link">Geo Search</a>
+                </div>
+                <ul class="navigation-menu">
+                    <li class="navigation-item"><a href="#" class="navigation-link" id="handleTemp">Temperature</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link" id="handleHum">Humidity</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link" id="handleWc">Wind speed</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link" id="handleLon">Longitude</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link" id="handleLat">Latitude</a></li>
+                    <li class="navigation-item"><a href="#" id="convert" class="navigation-link">conversion</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link" id="handleWeather">Weather Condition</a></li>
+                </ul>
+            </div>
+            <div class="navigation-2">
+                <button class="button" id="button">Check Map</button>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="content-1">
+                <div class="content-brand">
+                    <a href="#" class="content-nav">overview</a>
+                </div>
+                <div class="content-search">
+                    <input type="text" class="content-input" id="input" placeholder="search for your city">
+                    <svg class="search-svg">
+                        <use xlink:href="image/sprite3.svg#icon-search "></use>
+                    </svg>
+                </div>
+                <ul class="content-nav-menu">
+                    <li class="content-nav-item">
+                        <a href="#" class="content-nav-link">
+                            <svg class="facebook-svg">
+                                <use xlink:href="image/sprite4.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="content-2" id="main-content">
+                <div class="display-toggle center" id="displayContent">
+                    <div class="">
+                        <h2>Convert <sup>o</sup>C to <sup>o</sup>F</h2>
+                        <input type="number" class="conversion-input" placeholder="" id="conversion-1">
+                        <h6 class="sub-heading">
+                            <span id="data-1"></span> <sup>o</sup>F
+                        </h6>
+                    </div>
+    
+                    <div class="">
+                        <h2>Convert <sup>o</sup>F to <sup>o</sup>C</h2>
+                        <input type="number" class="conversion-input" placeholder="" id="conversion-2">
+                        <h6 class="sub-heading">
+                            <span id="data-2"></span> <sup>o</sup>C
+                        </h6>
+                    </div>
+                </div>
+
+                <div id="content-sub">
+                    <h1>The weather condition in <span id="city"></span><span id="location"></span></h1><br>
+                    <table>
+                        <tr class="display-toggle" id="tempToggle">
+                            <td>Temperature</td>
+                            <td id="temp"></td>
+                        </tr>
+                        <tr class="display-toggle" id="lonToggle">
+                            <td>Longitude</td>
+                            <td id="lon"></td>
+                        </tr>
+                        <tr class="display-toggle" id="latToggle">
+                            <td>Latitude</td>
+                            <td id="lat"></td>
+                        </tr>
+                        <tr class="display-toggle" id="humToggle">
+                            <td>Humidity</td>
+                            <td id="hum"></td>
+                        </tr>
+                        <tr class="display-toggle" id="wcToggle">
+                            <td>Weather Condition</td>
+                            <td id="wc"></td>
+                        </tr>
+                        <tr class="display-toggle" id="wsToggle">
+                            <td>Wind Speed</td>
+                            <td id="ws"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="map" class="display-toggle">
+                    
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/googleSearch.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBMCu0CscH0FMiSVxthbdBOlGbUZGKNJRk"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&libraries=places&key=AIzaSyBMCu0CscH0FMiSVxthbdBOlGbUZGKNJRk"></script>
+    <script src="js/search.js"></script>
+    <script src="js/conversion.js"></script>
+</body>
+</html>
+
