@@ -12,13 +12,19 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
-    <!-- Google Map -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
 
 </head>
 <body>
     <div id="load">
         <img src="image/Spinner-1s-200px.gif" class="img-edit">
+    </div>
+    <div class="pop-up">
+        <span class="pop-up-close">&times;</span>
+        <div class="pop-up-content">
+            <div class="pop-up-inner">
+                This all we can all talk about na
+            </div>
+        </div>
     </div>
     <div class="container" id="container">
         <nav class="navigation">
@@ -38,6 +44,7 @@
             </div>
             <div class="navigation-2">
                 <button class="button" id="button">Check Map</button>
+                <p class="footer-nav">All right reserved &copy; geosearch 2019 </p>
             </div>
         </nav>
         <div class="content">
@@ -52,33 +59,34 @@
                     </svg>
                 </div>
                 <ul class="content-nav-menu">
-                    <li class="content-nav-item">
-                        <a href="#" class="content-nav-link">
+                    <!-- <li class="content-nav-item fb-share-button" data-href="git+https://github. Com/Honeyspring/geoSearch.git" data-layout="button" data-size="small">
+                        <a href="#" class="content-nav-link fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">
                             <svg class="facebook-svg">
                                 <use xlink:href="image/sprite4.svg#icon-facebook"></use>
                             </svg>
                         </a>
-                    </li>
-                    
+                    </li> -->
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&width=96&height=20&appId" width="96" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </ul>
             </div>
             <div class="content-2" id="main-content">
                 <div class="display-toggle center" id="displayContent">
                     <div class="">
-                        <h2>Convert <sup>o</sup>C to <sup>o</sup>F</h2>
+                        <h2 class="convert-heading">Convert <sup>o</sup>C to <sup>o</sup>F</h2>
                         <input type="number" class="conversion-input" placeholder="" id="conversion-1">
                         <h6 class="sub-heading">
                             <span id="data-1"></span> <sup>o</sup>F
                         </h6>
                     </div>
-    
+                    
                     <div class="">
-                        <h2>Convert <sup>o</sup>F to <sup>o</sup>C</h2>
+                        <h2 class="convert-heading">Convert <sup>o</sup>F to <sup>o</sup>C</h2>
                         <input type="number" class="conversion-input" placeholder="" id="conversion-2">
                         <h6 class="sub-heading">
                             <span id="data-2"></span> <sup>o</sup>C
                         </h6>
                     </div>
+                   
                 </div>
 
                 <div id="content-sub">
@@ -114,8 +122,13 @@
                 <div id="map" class="display-toggle">
                     
                 </div>
-            </div>            
+                
+            </div>  
+            <footer class="footer">
+                <p>All right reserved &copy; geosearch 2019</p>
+            </footer>          
         </div>
+       
     </div>
 
     <script src="js/index.js"></script>
@@ -124,6 +137,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&libraries=places&key=AIzaSyBMCu0CscH0FMiSVxthbdBOlGbUZGKNJRk"></script>
     <script src="js/search.js"></script>
     <script src="js/conversion.js"></script>
+    <script src="js/jquery.js.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.pop-up').hide();
+            setTimeout(function() {
+                $('.pop-up').fadeIn('slow');
+            },2000);
+            $('.pop-up-close').on('click',function() {
+                $('.pop-up').fadeOut('slow');
+            });
+            
+        });
+    </script>
 </body>
 </html>
-
