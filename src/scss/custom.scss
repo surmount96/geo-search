@@ -46,7 +46,9 @@ body{
     &-content{
         background-color: #fff;
         width:35%;
-        height:55vh;
+        text-align: center;
+        line-height: 2;
+        height:25vh;
         margin:15rem auto;
         border-radius: 10px;
         padding: 1rem;
@@ -323,7 +325,6 @@ table{
         }
 
     }
-
     #map{
         height:30vh;
     }
