@@ -27,10 +27,7 @@ input.addEventListener('change', ($event) => {
         ws.innerHTML = data.wind.speed + ` ms<sup>-1</sup>`;
         lat.textContent = data.coord.lat;
         lon.textContent = data.coord.lon;
-    }).catch((err) => {
-        alert('Network Error');
     });
-
 
 
 }); 

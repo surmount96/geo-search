@@ -40,7 +40,6 @@ body {
   z-index: 99; }
   .pop-up-content {
     background-color: #fff;
-<<<<<<< HEAD
     width: 35%;
     text-align: center;
     line-height: 2;
@@ -48,15 +47,6 @@ body {
     margin: 15rem auto;
     border-radius: 10px;
     padding: 1rem; }
-=======
-        width:35%;
-        text-align: center;
-        line-height: 2;
-        height:25vh;
-        margin:15rem auto;
-        border-radius: 10px;
-        padding: 1rem; }
->>>>>>> 4b993744648dcfcbacadcc8f1f2c9e383cb4fcd0
   .pop-up-close {
     font-size: 4.5rem;
     color: #ddd;
