@@ -7,3 +7,4 @@ precipitation.
 Make sure gulp is installed as a global package, then run **gulp**
 This will compile,the sass file, lint, transpile and minify the code and automatically open it up on your web browser,
 here you can make changes to any of the file and your page will automatically reload.
+From gh-pages
